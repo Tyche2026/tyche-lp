@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyche | 集客支援</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Tyche（テイク）</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#about">特徴</a></li>
+                    <li><a href="#service">サービス</a></li>
+                    <li><a href="#flow">流れ</a></li>
+                    <li><a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">📩 LINEで無料相談</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--FV-->
+    <section class="fv">
+        <div class="fv-inner">
+            <h2>集客を仕組み化する</h2>
+            <p>Google管理 × Web制作で売上を伸ばす</p>
+            <a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">📩 LINEで無料相談</a>
+        </div>
+    </section>
+
+    <!--悩み-->
+    <section class="trouble section fade">
+        <div class="container">
+            <h2>こんなお悩みありませんか？</h2>
+            <ul>
+                <li>Googleマップで上位表示されない</li>
+                <li>ホームページが集客に繋がっていない</li>
+                <li>広告に頼り続けている</li>
+                <li>何を改善すればいいかわからない</li>
+            </ul>
+        </div>
+    </section>
+
+    <!--Service-->
+    <section id="service" class="section fade">
+        <div class="container">
+            <h2>サービス</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <img src="images/meo.jpg">
+                    <h3>Google管理(MEO)</h3>
+                    <p>検索上位表示・口コミ改善・運用代行</p>
+                </div>
+
+                <div class="card">
+                    <img src="images/web.jpg">
+                    <h3>Web制作</h3>
+                    <p>LP制作・導線設計・CV改善</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--Flow-->
+    <section id="flow" class="section fade">
+        <div class="container">
+            <h2>ご利用の流れ</h2>
+            <ul class="flow">
+                <li data-step="1">
+                    <strong>お問い合わせ</strong><br>
+                    <span>LINEで簡単相談</span>
+                </li>
+                <li data-step="2">
+                    <strong>ヒアリング</strong><br>
+                    <span>現状を分析</span>
+                </li>
+                <li data-step="3">
+                    <strong>改善提案</strong><br>
+                    <span>最適な戦略を提案</span>
+                </li>
+                <li data-step="4">
+                    <strong>運用開始</strong><br>
+                    <span>継続サポート</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!--CTA-->
+    <section class="cta">
+        <h2>まずは無料相談から</h2>
+        <a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">📩 LINEで無料相談</a>
+    </section>
+
+    <footer>
+        <p>© Tyche</p>
+    </footer>
+
+    <script>
+        const fades = document.querySelectorAll('.fade');
+
+        function fadeIn() {
+            fades.forEach(el => {
+                const rect = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (rect < windowHeight - 100) {
+                    el.classList.add('show');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', fadeIn);
+        fadeIn();
+    </script>
+
+</body>
+
+</html>
