@@ -110,12 +110,16 @@ body {
 }
 
 .fv h2 {
-    font-size: 40px;
+    font-size: 44px;
     margin-bottom: 20px;
 }
 
 .fv p {
     font-size: 18px;
+}
+
+.fv-text {
+    margin-bottom: 20px;
 }
 
 /* ボタン */
@@ -201,7 +205,7 @@ body {
 
 /* 悩み */
 .trouble {
-    background: #f9fbff;
+    background: #f7f9fc;
 }
 
 .trouble h2 {
@@ -211,36 +215,37 @@ body {
     font-weight: bold;;
 }
 
-.trouble ul {
-    max-width: 700px;
-    margin: 0 auto;
+/* グリッド化 */
+.trouble-list {
     display: grid;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-.trauble li {
+/* カード */
+.trouble-item {
     background: #fff;
-    padding: 22px 25px;
+    padding: 25px;
     border-radius: 12px;
-    font-size: 18px;
-    font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    position: relative;
-    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 }
 
-.trauble li::before {
-    content: "";
-    width: 10px;
-    height: 10px;
-    background: #007bff;
+/* 番号 */
+.trouble-item span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    background: #eef5ff;
+    padding: 10px 14px;
     border-radius: 50%;
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+}
+
+/* テキスト */
+.trouble-item p {
+    margin: 0;
 }
 
 /* タイトル */
@@ -271,11 +276,24 @@ body {
     text-decoration: none;
     color: #333;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
+    transition: 0.3s; 
+    position: relative;
 }
 
-.portfolio-card:hover {
-    transform: translateY(-8px);
+.portfolio-card:hover .portfolio-link {
+    transform: translateX(5px);
+}
+
+.portfolio-card::after {
+    content: "実績";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #007bff;
+    color: #fff;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 20px;
 }
 
 /* 画像 */
@@ -302,8 +320,17 @@ body {
 
 /* リンク風 */
 .portfolio-link {
+    display: inline-block;
+    margin-top: 10px;
+    transition: 3s;
     color: #007bff;
     font-weight: bold;
+}
+
+.result {
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* CTA */
@@ -312,6 +339,14 @@ body {
     padding: 100px 20px;
     background: linear-gradient(135deg,#007bff,#00c6ff);
     color: #fff;
+}
+
+.cta h2 {
+    font-size: 30px;
+}
+
+.cta p {
+    font-size: 18px;
 }
 
 .line-btn {
@@ -345,5 +380,33 @@ body {
 
     .nav {
         flex-direction: column;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .nav a {
+        width: 100%;
+    }
+
+    .nav .btn {
+        text-align: center;
+    }
+
+    .portfolio-list {
+        flex-direction: column;
+    }
+
+    .trouble-list {
+        grid-template-columns: 1fr;
     }
 }
