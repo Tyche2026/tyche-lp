@@ -12,16 +12,32 @@
 
     <header class="header">
         <div class="container">
-            <h1 class="logo">Tyche（テイク）</h1>
+
+            <h1 class="logo">
+            <img src="images/logo.png" alt="Tyche">
+            </h1>
             <nav>
                 <ul class="nav">
                     <li><a href="#about">特徴</a></li>
                     <li><a href="#service">サービス</a></li>
                     <li><a href="#flow">流れ</a></li>
-                    <li><a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">📩 LINEで無料相談</a></li>
+                    <li><a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">LINEで無料相談</a></li>
                 </ul>
             </nav>
         </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="sp-nav" id="sp-nav">
+            <a href="#feature">特徴</a>
+            <a href="#service">サービス</a>
+            <a href="#flow">流れ</a>
+        </nav>
+
     </header>
 
     <!--FV-->
@@ -33,7 +49,7 @@
             Googleマップ運用 × Web制作で<br>
             来店数を安定して伸ばします
             </p>
-            <a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">📩 LINEで無料相談</a>
+            <a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">LINEで無料相談</a>
         </div>
     </section>
 
@@ -165,7 +181,7 @@
     <!--CTA-->
     <section class="cta">
         <h2>まずは無料相談から</h2>
-        <a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">📩 LINEで無料相談</a>
+        <a href="https://lin.ee/phquBcBC" target="_blank" class="btn line-btn">LINEで無料相談</a>
     </section>
 
     <footer>
@@ -188,6 +204,18 @@
 
         window.addEventListener('scroll', fadeIn);
         fadeIn();
+    </script>
+
+    <script>
+        const hamburger = document.getElementById("hamburger");
+        const nav = document.getElementById("sp-nav");
+
+        hamburger.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        console.log(hamburger);
+
     </script>
 
 </body>

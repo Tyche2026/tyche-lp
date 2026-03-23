@@ -10,6 +10,7 @@ body {
     line-height: 1.7;
     padding-top: 70px;
     background: #f8f9fb;
+    margin-top: 80px;
 }
 
 /* 共通 */
@@ -35,6 +36,7 @@ body {
     width: 100%;
     background: #fff;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 .header .container {
@@ -50,8 +52,48 @@ body {
     padding: 20px 40px;
 }
 
-body {
-    margin-top: 80px;
+.logo img {
+    height: 40px;
+}
+
+/* ハンバーガー */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #333;
+}
+
+/* スマホナビ */
+.sp-nav {
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.sp-nav.active {
+    right: 0;
+}
+
+.sp-nav a {
+    text-decoration: none;
+    color: #0f172a;
+    font-size: 18px;
 }
 
 .nav {
@@ -68,12 +110,31 @@ body {
 
 .nav a {
     text-decoration: none;
-    color: #333;
+    color: #0f172a;
     margin-left: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: 0.3s;
+    position: relative;
 }
 
 .nav a:hover {
     color: #007bff;
+}
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
 }
 
 .nav .btn {
@@ -128,17 +189,19 @@ body {
 /* ボタン */
 .btn {
     display: inline-block;
-    padding: 15px 30px;
-    background: linear-gradient(135deg,#007bff,#0056b3);
+    padding: 12px 22px;
+    background: linear-gradient(135deg,#2563eb,#1e3a8a);
     color: #fff;
-    border-radius: 30px;
+    border-radius: 999px;
     margin-top: 20px;
+    font-weight: bold;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .btn:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
 }
 
 /* カード */
@@ -402,8 +465,15 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .nav {
-        flex-direction: column;
+    .header {
+        padding: 8px 0;
+    }
+
+    .header .container {
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .header-inner {
@@ -430,6 +500,7 @@ body {
         width: 100%;
         gap: 15px;
         margin-top: 10px;
+        display: none;
     }
 
     .nav a {
@@ -446,5 +517,13 @@ body {
 
     .trouble-list {
         grid-template-columns: 1fr;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .logo img {
+        height: 28px;
     }
 }
