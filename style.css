@@ -36,6 +36,8 @@ body {
 /* header */
 .header {
     position: fixed;
+    height: 60px;
+    padding: 0 16px;
     top: 0;
     width: 100%;
     background: #fff;
@@ -48,10 +50,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    height: 60px;
 }
 
 .header-logo img {
     height: 60px;
+    width: auto;
+    display: block;
 }
 
 .header-btn {
@@ -159,8 +164,12 @@ body {
     gap: 25px;
     transition: 0.4s;
     color: #fff;
+    text-align: center;
 }
 
+.sp-nav li {
+    margin: 20px 0;
+}
 .sp-nav.active {
     right: 0;
 }
@@ -169,6 +178,7 @@ body {
     text-decoration: none;
     color: #fff;
     font-size: 20px;
+    display: inline-block;
 }
 
 /* FV */
@@ -179,6 +189,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 60px;
 }
 
 .fv-inner {
@@ -687,6 +698,7 @@ body {
 
     .header {
         padding: 8px 0;
+        height: 55px;
     }
 
     .header .container {
@@ -704,6 +716,10 @@ body {
 
     .header-logo {
         font-size: 18px;
+    }
+
+    .header-logo img {
+        height: 28px;
     }
 
     .header-nav {
@@ -728,6 +744,24 @@ body {
 
     .flow {
         flex-direction: column;
+        gap: 20px;
+    }
+
+    .flow li {
+        width: 100%;
+    }
+
+    .flow-item {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .flow h3 {
+        font-size: 18px;
+    }
+
+    .flow p {
+        font-size: 14px;
     }
 
     .footer-inner {
