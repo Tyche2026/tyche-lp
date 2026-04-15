@@ -133,14 +133,17 @@ body {
     cursor: pointer;
     height: 100%;
     margin-left: auto;
+    padding: 10px;
 }
 
 .hamburger span {
-    width: 25px;
-    height: 2px;
-    background: #333;
-    margin: 4px 0;
+    width: 28px;
+    height: 5px;
+    background: #0f172a;
+    margin: 6px 0;
     transition: 0.3s;
+    border-radius: 2px;
+    display: block;
 }
 
 .hamburger.active span:nth-child(1) {
@@ -747,6 +750,13 @@ body {
     .hamburger {
         display: flex;
         margin-left: auto;
+        padding: 12px;
+    }
+
+    .hamburger span {
+        width: 30px;
+        height: 4px;
+        margin: 6px 0;
     }
 
     .flow {
