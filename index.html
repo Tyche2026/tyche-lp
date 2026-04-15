@@ -343,15 +343,20 @@
     </script>
 
     <script>
-        const hamburger = document.getElementById("hamburger");
-        const nav = document.getElementById("sp-nav");
+        
+        document.addEventListener("DOMContentLoaded", () => {
 
-        hamburger.addEventListener("click", () => {
-            nav.classList.toggle("active");
-            hamburger.classList.toggle("active"); //
+          const hamburger = document.getElementById("hamburger");
+          const nav = document.getElementById("sp-nav");
+
+          console.log(hamburger);
+
+          hamburger.addEventListener("click", () => {
+             nav.classList.toggle("active");
+             hamburger.classList.toggle("active"); //
+          });
+
         });
-
-        console.log(hamburger);
 
     </script>
 
