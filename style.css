@@ -69,7 +69,6 @@ body {
     transform: none;
     margin-left: auto;
     margin-right: 30px;
-    pointer-events: none;
 }
 
 .header-nav a {
@@ -128,26 +127,29 @@ body {
 
 /* ハンバーガー */
 .hamburger {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    height: 100%;
     margin-left: auto;
     padding: 10px;
     position: relative;
-    z-index: 1100;
+    z-index: 9999;
 }
 
 .hamburger span {
     width: 30px;
     height: 4px;
-    background: #000 !important;
-    margin: 6px 0;
+    background: #0f172a;
+    margin: 2px 0;
     transition: 0.3s;
     border-radius: 2px;
     display: block;
+}
+
+.hamburger.active span {
+    background: #fff;
 }
 
 .hamburger P {
