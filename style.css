@@ -51,8 +51,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     padding: 0 40px;
-    height: 80px;
+    height: 100%;
     width: 100%;
 }
 
@@ -137,7 +138,10 @@ body {
     cursor: pointer;
     margin-left: auto;
     padding: 10px;
-    position: relative;
+    right: 16px;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
     z-index: 9999;
 }
 
@@ -776,9 +780,10 @@ body {
     }
 
     .hamburger span {
-        width: 30px;
-        height: 4px;
-        margin: 6px 0;
+        width: 26px;
+        height: 3px;
+        margin: 3px 0;
+        border-radius: 2px;
     }
 
     .flow {
